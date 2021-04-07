@@ -6,15 +6,15 @@ import { HttpClient } from '@angular/common/http'
 })
 export class AuthService {
 
-  private URL = "https://api-pagos-utxj.herokuapp.com/api "
+  private URL = "https://api-pagos-utxj.herokuapp.com/api/"
 
   constructor(private http: HttpClient) { }
 
   signUp(user: {}) {
-    return this.http.post<any>(this.URL + '/signup', user);
+    return this.http.post<any>(this.URL + 'signup', user);
   }
 
   signIn(user: {}) {
-    return this.http.post<any>(this.URL + '/signin', user);
+    return this.http.post<any>(this.URL + 'signin', user);
   }
 }
