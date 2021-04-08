@@ -12,7 +12,7 @@ const helper = new JwtHelperService();
 export class AuthService {
   private loggedIn = false;
 
-  private URL = "https://api-pagos-utxj.herokuapp.com/api";
+  private URL = "https://api-pagos-utxj.herokuapp.com/api/";
 
   constructor(private http: HttpClient, private router: Router) {
     this.checkToken();
