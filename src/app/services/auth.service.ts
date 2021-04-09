@@ -55,4 +55,8 @@ export class AuthService {
       }
     }
   }
+
+  view() {
+    return this.http.get<any>(this.URL + '/view');
+  }
 }

@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class AdminComponent implements OnInit {
   isloggin = false;
+  data : any;
   constructor(
     private authService: AuthService,
     private router: Router
@@ -21,7 +22,9 @@ export class AdminComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    this.authService.view().subscribe((res) => {
+     this.data = res;
+    });
   }
 
   // tslint:disable-next-line:typedef
